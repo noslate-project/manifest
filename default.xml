@@ -1,14 +1,7 @@
 <manifest>
-  <remote
-    name="noslate"
-    alias="origin"
-    fetch="https://github.com/noslate-project"
-    pushurl="ssh://git@github.com/noslate-project"/>
-  <remote
-    name="github"
-    alias="origin"
-    fetch="https://github.com"/>
-  <default remote="noslate" revision="main"/>
+  <remote name="noslate" alias="origin" fetch="https://github.com/noslate-project" pushurl="ssh://git@github.com/noslate-project"/>
+  <remote name="github" alias="origin" fetch="https://github.com"/>
+  <default remote="noslate" revision="v0.21.x"/>
 
   <!-- MARK: Basic -->
   <project name="noslated" groups="base"/>
@@ -20,58 +13,18 @@
     <linkfile src="CPPLINT.cfg" dest="CPPLINT.cfg"/>
     <linkfile src="build.mk" dest="Makefile"/>
   </project>
-  <project name="noslate" groups="base"/>
+  <project name="noslate" groups="base" dest-branch="main" revision="8305c72022a7eb156dd07ddf077e76f0848fd37b"/>
   <project name="turf" groups="base"/>
 
-  <project name="libyuv" />
+  <project name="libyuv" dest-branch="master" revision="503df6249d366ebd01120e52cf4853b4e9b4a1fb"/>
 
   <!-- MARK: Vendor -->
-  <project
-    path="node"
-    name="nodejs/node"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/v16.18.1"/>
-  <project
-    path="vendor/cpplint"
-    name="cpplint/cpplint"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/1.5.4"/>
-  <project
-    path="vendor/curl"
-    name="curl/curl"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/curl-7_80_0"/>
-  <project
-    path="vendor/cwalk"
-    name="likle/cwalk"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/v1.2.5"/>
-  <project
-    path="vendor/googletest"
-    name="google/googletest"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/release-1.10.0"/>
-  <project
-    path="vendor/gyp-next"
-    name="nodejs/gyp-next"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/v0.14.0"/>
-  <project
-    path="vendor/protobuf"
-    name="protocolbuffers/protobuf"
-    remote="github"
-    groups="vendor"
-    revision="refs/tags/v2.6.1"/>
-  <project
-    path="vendor/wpt"
-    name="web-platform-tests/wpt"
-    remote="github"
-    groups="vendor"
-    revision="313f99aafa6620894b8d7a7acc6e015b9548e179"/>
+  <project path="node" name="nodejs/node" remote="github" groups="vendor" revision="refs/tags/v16.18.1"/>
+  <project path="vendor/cpplint" name="cpplint/cpplint" remote="github" groups="vendor" revision="refs/tags/1.5.4"/>
+  <project path="vendor/curl" name="curl/curl" remote="github" groups="vendor" revision="refs/tags/curl-7_80_0"/>
+  <project path="vendor/cwalk" name="likle/cwalk" remote="github" groups="vendor" revision="refs/tags/v1.2.5"/>
+  <project path="vendor/googletest" name="google/googletest" remote="github" groups="vendor" revision="refs/tags/release-1.10.0"/>
+  <project path="vendor/gyp-next" name="nodejs/gyp-next" remote="github" groups="vendor" revision="refs/tags/v0.14.0"/>
+  <project path="vendor/protobuf" name="protocolbuffers/protobuf" remote="github" groups="vendor" revision="refs/tags/v2.6.1"/>
+  <project path="vendor/wpt" name="web-platform-tests/wpt" remote="github" groups="vendor" revision="313f99aafa6620894b8d7a7acc6e015b9548e179" dest-branch="313f99aafa6620894b8d7a7acc6e015b9548e179"/>
 </manifest>
