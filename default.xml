@@ -1,7 +1,7 @@
 <manifest>
   <remote name="noslate" alias="origin" fetch="https://github.com/noslate-project" pushurl="ssh://git@github.com/noslate-project"/>
   <remote name="github" alias="origin" fetch="https://github.com"/>
-  <default remote="noslate" revision="refs/tags/v0.21.2"/>
+  <default remote="noslate" revision="v0.21.x"/>
 
   <!-- MARK: Basic -->
   <project name="noslated" groups="base"/>
